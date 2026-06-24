@@ -1,0 +1,57 @@
+<section class="proud-members py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">
+        Proud Members
+      </h2>
+
+      <p class="lead text-muted">
+        The Redhead Orthodontics Team are proud to be associated with the following organisations…
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <% 1.upto(8) do |i| %>
+        <div class="col-6 col-md-3">
+          <div class="member-card">
+            <%= image_tag "partners/member_#{i}.jpg", class: "member-image" %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.proud-members {
+  background: #f8f9fa;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.member-image {
+  width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+}
+</style>

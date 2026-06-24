@@ -1,0 +1,166 @@
+<section class="types-of-braces py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Types of Braces</h2>
+
+      <p class="lead text-muted">
+        We specialise on Invisible braces. For our entire range, please click here.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Invisalign -->
+      <div class="col-md-6">
+        <div class="brace-card">
+
+          <%= image_tag "invisalign_homepage.jpg", class: "brace-image" %>
+
+          <div class="brace-content">
+            <h3>INVISALIGN</h3>
+
+            <p>
+              A removeable transparent brace made of thin plastic that only covers your teeth and does not affect your speech.
+            </p>
+
+            <a href="#" class="brace-btn">
+              [ learn more ]
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Lingual -->
+      <div class="col-md-6">
+        <div class="brace-card">
+
+          <%= image_tag "hiddenlingual_homepage.jpg", class: "brace-image" %>
+
+          <div class="brace-content">
+            <h3>LINGUAL</h3>
+
+            <p>
+              Worn on the inside of your teeth this really is considered the ultimate in invisible braces as it cannot be seen.
+            </p>
+
+            <a href="#" class="brace-btn">
+              [ learn more ]
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Clear -->
+      <div class="col-md-6">
+        <div class="brace-card">
+
+          <%= image_tag "clearbraces_homepage.jpg", class: "brace-image" %>
+
+          <div class="brace-content">
+            <h3>CLEAR</h3>
+
+            <p>
+              Worn on the outside of your teeth, to improve aesthetics you can have these with nearly invisible brackets.
+            </p>
+
+            <a href="#" class="brace-btn">
+              [ learn more ]
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sparkle -->
+      <div class="col-md-6">
+        <div class="brace-card">
+
+          <%= image_tag "sparkle_aligners_homepage.png", class: "brace-image" %>
+
+          <div class="brace-content">
+            <h3>SPARKLE ALIGNERS</h3>
+
+            <p>
+              If you're looking for a discreet and convenient way to straighten your teeth, Sparkle Aligners may be the perfect choice for you.
+            </p>
+
+            <span class="coming-soon">
+              [ coming soon ]
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-primary btn-lg rounded-pill px-5">
+        SEE OUR ENTIRE RANGE OF BRACES
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.types-of-braces {
+  background: #f8f9fa;
+}
+
+.brace-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.brace-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.brace-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.brace-content {
+  padding: 30px;
+}
+
+.brace-content h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.brace-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.brace-btn,
+.coming-soon {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0d6efd;
+  text-transform: lowercase;
+}
+
+.brace-btn:hover {
+  color: #084298;
+}
+
+.btn-primary {
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-weight: 600;
+}
+</style>

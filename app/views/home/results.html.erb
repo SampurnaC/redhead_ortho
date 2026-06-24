@@ -1,0 +1,87 @@
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-semibold text-primary">
+        Real Patient Transformations
+      </span>
+
+      <h1 class="display-4 fw-bold mt-2 mb-4">
+        Results
+      </h1>
+
+      <p class="lead text-muted mx-auto" style="max-width: 900px;">
+        We take the utmost pride in giving our patients a fantastic smile they can be proud of.
+      </p>
+
+      <p class="text-muted mx-auto fs-5" style="max-width: 1000px;">
+        The following Before & After images show a small set of our patients smiles taken over the years, achieved using a range of different Treatments and Appliances, including amongst others Invisalign Aligners, Hidden Lingual and Clear Braces.
+      </p>
+    </div>
+
+    <!-- Results Loop Starts Here -->
+    <div class="row">
+      <% @results.each do |result| %>
+
+        <div class="col-12 mb-5">
+          <div class="card border-0 shadow-lg result-card">
+
+            <div class="row g-4 p-4 align-items-center">
+
+              <div class="col-md-6">
+                <div class="position-relative">
+                  <%= image_tag "results/#{result}.jpg",
+                      class: "img-fluid rounded-4 result-image" %>
+
+                  <span class="badge bg-dark result-badge">
+                    Before
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="position-relative">
+                  <%= image_tag "results/#{result}a.jpg",
+                      class: "img-fluid rounded-4 result-image" %>
+
+                  <span class="badge bg-success result-badge">
+                    After
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.result-card {
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+}
+
+.result-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.result-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 14px;
+}
+</style>

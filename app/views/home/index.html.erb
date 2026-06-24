@@ -1,0 +1,162 @@
+<section class="hero-section d-flex align-items-center">
+  
+  <div class="hero-bg">
+    <%= image_tag "redhead_hero_image.jpg", class: "hero-bg-img" %>
+  </div>
+
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 text-center text-lg-start hero-content">
+        
+        <h1 class="hero-title">
+          Leading Orthodontics in the heart of London
+        </h1>
+
+        <p class="hero-subtitle mt-3">
+          Specialist orthodontic care for children, teens and adults.
+        </p>
+
+        <div class="hero-buttons mt-4 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+
+  <a href="/braces" class="btn btn-braces btn-lg">
+    Braces
+  </a>
+
+  <a href="/treatments" class="btn btn-treatments btn-lg">
+    Treatments
+  </a>
+
+  <a href="/appointments" class="btn btn-appointments btn-lg">
+    Appointments
+  </a>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="py-5 bg-light border-bottom">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center">
+        <p class="fs-5 text-muted mb-0">
+          One of the leading London Orthodontic Practices, Dr Redhead and his team take enormous care to ensure your orthodontic treatment is of the very highest standard.
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "google_review" %>
+
+<%= render "orthodontic_specialists" %>
+
+<%= render "types_of_braces" %>
+
+<%= render "where_to_start" %>
+
+<%= render "team" %>
+
+<%= render "our_promise_to_you" %>
+
+<%= render "proud_members" %>
+
+<%= render "footer" %>
+
+
+
+
+
+
+
+
+<style>
+
+.hero-section {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #444;
+}
+
+.hero-buttons .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+
+
+.btn-braces {
+  background: #2f6fed;
+  color: #fff;
+}
+
+.btn-braces:hover {
+  background: #1f56c7;
+  transform: translateY(-2px);
+}
+
+.btn-treatments {
+  background: #6f42c1;
+  color: #fff;
+}
+
+.btn-treatments:hover {
+  background: #5a32a3;
+  transform: translateY(-2px);
+}
+
+.btn-appointments {
+  background: #20c997;
+  color: #fff;
+}
+
+.btn-appointments:hover {
+  background: #179c79;
+  transform: translateY(-2px);
+}
+</style>
