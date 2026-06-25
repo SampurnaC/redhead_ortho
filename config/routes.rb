@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get "promise" => "home#promise"
   get "treatments" => "home#treatments"
 
-
+  get "/treatments/:slug", to: "home#treatment", as: :treatment
 end
