@@ -6,6 +6,12 @@ class HomeController < ApplicationController
     facial-surgery
   ].freeze
 
+  BRACES_SLUGS=%w[
+    clear-glass-braces
+    hidden-lingual-braces
+    invisalign
+  ].freeze
+
   def index
   end
 
@@ -26,4 +32,11 @@ class HomeController < ApplicationController
     render "home/treatment/#{@slug.tr('-','_')}" 
   end
   
+  def braces
+    @slug=params[:slug]
+    raise ApplicationController::RoutingError, "Not Found" unless BRACES_SLUGS.include?(@slug)
+
+    render "home/braces/#{@slug.tr('-','_')}" 
+  end
+
 end

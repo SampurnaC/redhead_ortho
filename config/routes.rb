@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get "treatments" => "home#treatments"
 
   get "/treatments/:slug", to: "home#treatment", as: :treatment
+
+  get "/types-of-braces/:slug", to: "home#braces", as: :braces
+
 end
