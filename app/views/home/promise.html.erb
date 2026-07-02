@@ -9,12 +9,12 @@
       <p class="lead text-muted">
         These are the 5 main principles that patients can expect from Redhead Orthodontics.
       </p>
+
       <h2>
-      Redhead Orthodontics is;
+        Redhead Orthodontics is;
       </h2>
     </div>
 
-    <!-- Values -->
     <div class="row justify-content-center g-3 mb-5">
 
       <div class="col-auto">
@@ -45,7 +45,6 @@
       </h3>
     </div>
 
-    <!-- Promise Items -->
     <div class="row justify-content-center">
       <div class="col-lg-10">
 
@@ -53,25 +52,15 @@
 
           <ul class="promise-list">
             <li>Everything in the clinic will be clean.</li>
-
             <li>Redhead Orthodontics will keep your notes private and safe.</li>
-
             <li>You should be involved in all stages of your treatment.</li>
-
             <li>You should have an orthodontic treatment plan that is right for you.</li>
-
             <li>Redhead Orthodontics will listen to anything you have to say and do something about any complaints you make.</li>
-
             <li>You should be told what is happening to you all the time.</li>
-
             <li>You should be asked if you want something or not.</li>
-
             <li>The staff should treat you properly with respect.</li>
-
             <li>Redhead Orthodontics should keep you safe and stop anyone or anything from hurting you on the clinic.</li>
-
             <li>Your medicines will be looked after properly.</li>
-
             <li>That Redhead Orthodontics has staff who know how to do their job properly.</li>
           </ul>
 
@@ -79,11 +68,10 @@
       </div>
     </div>
 
-    <!-- Testimonial -->
     <div class="row justify-content-center mt-5">
       <div class="col-lg-8">
 
-        <div class="testimonial-card text-center">
+        <div class="testimonial-card">
 
           <div class="quote-mark">❝</div>
 
@@ -108,35 +96,24 @@
   background: #f8f9fa;
 }
 
+/* Pills */
 .promise-pill {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 18px 34px;
   border-radius: 50px;
   color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
+  font-size: 1.05rem;
 }
 
-.safe {
-  background: #198754;
-}
+.safe { background: #198754; }
+.effective { background: #0d6efd; }
+.caring { background: #e83e8c; }
+.responsive { background: #fd7e14; }
+.well-led { background: #6f42c1; }
 
-.effective {
-  background: #0d6efd;
-}
-
-.caring {
-  background: #e83e8c;
-}
-
-.responsive {
-  background: #fd7e14;
-}
-
-.well-led {
-  background: #6f42c1;
-}
-
+/* Card */
 .promise-card {
   background: #fff;
   border-radius: 20px;
@@ -144,40 +121,42 @@
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
+/* LIST (now normal bullets) */
 .promise-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
 }
 
 .promise-list li {
-  padding: 15px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #eee;
-  font-size: 1.05rem;
 }
 
 .promise-list li:last-child {
   border-bottom: none;
 }
 
-.promise-list li::before {
-  content: "✓";
-  color: #198754;
-  font-weight: bold;
-  margin-right: 12px;
-}
-
+/* Testimonial (Google-style) */
 .testimonial-card {
   background: #fff;
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: "★★★★★";
+  color: #fbbc05;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .quote-mark {
-  font-size: 4rem;
-  color: #0d6efd;
+  font-size: 3.5rem;
+  color: #fbbc05;
   line-height: 1;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 </style>

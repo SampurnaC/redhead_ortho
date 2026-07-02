@@ -26,11 +26,16 @@
               Braces
             </a>
 
+           
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/types-of-braces/clear">Clear Glass Braces</a></li>
-              <li><a class="dropdown-item" href="/types-of-braces/lingual">Hidden Lingual Braces</a></li>
-              <li><a class="dropdown-item" href="/types-of-braces/invisalign">Invisalign</a></li>
+              <%= link_to "Clear Glass Braces", braces_path("clear-glass-braces"), class: "dropdown-item" %>
+              <%= link_to "Hidden Lingual Braces", braces_path("hidden-lingual-braces"), class: "dropdown-item" %>
+              <%= link_to "Invisalign", braces_path("invisalign"), class: "dropdown-item" %>
+
+
             </ul>
+
+
           </li>
 
           <li class="nav-item dropdown">

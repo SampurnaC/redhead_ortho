@@ -1,0 +1,190 @@
+<section class="container py-5">
+
+  <!-- HERO -->
+  <div class="text-center mb-5">
+
+    <h1 class="display-4 fw-bold mb-3">
+      Hidden Lingual Braces
+    </h1>
+
+    <h3 class="fw-semibold mb-4">
+      What’s meant by Lingual Orthodontics?
+    </h3>
+
+    <p class="lead leadtext mb-4">
+      Lingual comes from Latin and means “on the side towards the tongue”. Lingual Orthodontics refers to the correction of malaligned teeth using fixed appliances (braces) bonded to the inner side of the teeth.
+    </p>
+
+    <p class="lead leadtext mb-4 fst-italic">
+      Hidden Lingual Braces typically range in price between £4,400 – £9,000.
+    </p>
+
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="treatment-hero-fullwidth">
+  <%= image_tag "braces/hidden_lingual_braces_redhead.jpg",
+      class: "treatment-hero-img",
+      alt: "Clear Glass Braces" %>
+</div>
+
+
+  <!-- MAIN TEXT -->
+  <div class="mx-auto mb-5" style="max-width: 900px;">
+
+    <p>
+      By bonding to the inner side of the teeth, lingual braces are the most invisible of all the orthodontic systems. No one will know you are wearing a fixed brace.
+    </p>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mb-5">
+
+    <h3 class="fw-bold mb-3">
+      Is a Lingual Hidden Brace best for me?
+    </h3>
+
+    <p class="mb-4">
+      Take a quick Best Brace Quiz and in 1 min establish if this is the right brace for you.
+    </p>
+
+    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+
+      <a href="#" class="btn btn-primary btn-lg rounded-pill px-4">
+        SEE OUR RANGE OF BRACES
+      </a>
+
+      <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold">
+        TAKE THE BEST BRACE QUIZ
+      </a>
+
+      <a href="#" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+        READ OUR GOOGLE REVIEWS
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Q&A SECTION -->
+  <div class="mx-auto mb-5" style="max-width: 900px;">
+
+    <h3 class="fw-bold mb-3">
+      Can any malalignment be corrected with Lingual Orthodontics?
+    </h3>
+
+    <p class="lead leadtext mb-4">
+      Yes. Whereas removable appliances allow only simple, minor tooth movements, extreme malalignments can be corrected with hidden lingual orthodontics, which is not necessarily the case when compared with the removable Invisalign system. Invisalign certainly struggles to align rotated and spaced teeth.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      What is the age limit for Lingual Orthodontics?
+    </h3>
+
+    <p class="lead leadtext mb-4">
+      There is no limit, provided the periodontal tissues are fundamentally intact, i.e. the teeth are still relatively firmly fixed in the bone. It is quite common to believe that braces are only suitable for children and adolescents. People tend to think “It’s too late for me”, but they are often mistaken. Even patients in their sixties can be treated effectively with fixed lingual appliances.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Is the Lingual technique also suitable for children?
+    </h3>
+
+    <p class="lead leadtext mb-4">
+      Yes, but not until most of the permanent teeth have erupted.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      How does the new Incognito System differ from traditional Lingual Braces?
+    </h3>
+
+    <p class="lead leadtext mb-4">
+      Incognito is the first entirely individual bracket system for hidden lingual orthodontics. Incognito Lingual Braces offer a new variety of treatment possibilities to the Orthodontist and the highest patient comfort that is technically possible – reducing tongue irritations, speech problems and shortening the time necessary to get used to your braces.
+    </p>
+
+    <p class="lead leadtext mb-4">
+      The brace is the most invisible of all the orthodontic fixed brace systems and relies on very little patient input.
+    </p>
+
+    <p class="lead leadtext mb-4">
+      In addition to Incognito, we can provide the ‘Win Lingual System’ but in our experience patients prefer the Incognito brace because the brackets are smaller and can lie much closer to the teeth, reducing irritation and speech issues.
+    </p>
+
+  </div>
+  <% videos = [
+    { id: "DG4oqyIMaUM" },
+    { id: "v-jpUD6g0VQ" },
+    { id: "rxJExVVX7xA" }
+  ] %>
+  <div class="container mb-5">
+  
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10 text-center">
+        <p class="fs-5">
+          The video below gives you an idea of how little a patients speech is affected after just fitting an Incognito brace.
+        </p>
+      </div>
+    </div>
+  
+    <div class="row g-4 justify-content-center">
+  
+      <% videos.each do |video| %>
+        <div class="col-12 col-md-4 text-center">
+  
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/<%= video[:id] %>/hqdefault.jpg"
+                 class="img-fluid rounded-4 shadow"
+                 alt="YouTube Video">
+  
+            <a href="https://www.youtube.com/watch?v=<%= video[:id] %>"
+               target="_blank"
+               class="video-play">
+              ▶
+            </a>
+          </div>
+  
+        </div>
+      <% end %>
+  
+    </div>
+  
+  </div>
+</section>
+
+<style>
+.video-thumb {
+  position: relative;
+  display: inline-block;
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  background: rgba(0,0,0,0.5);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.treatment-hero-fullwidth {
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.treatment-hero-img {
+  width: 100%;
+  max-width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+</style>
