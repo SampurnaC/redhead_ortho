@@ -39,6 +39,9 @@ class HomeController < ApplicationController
     render "home/braces/#{@slug.tr('-','_')}" 
   end
 
+  def types_of_braces
+  end
+  
   def promise
   end
 end

@@ -1,55 +1,67 @@
-<header class="site-header border-bottom">
+<nav class="navbar navbar-expand-lg py-2">
+  <div class="container-fluid d-flex align-items-center">
 
-  <nav class="navbar navbar-expand-lg py-2">
-    <div class="container">
+    <!-- LEFT: BRAND -->
+    <%= link_to "Redhead", root_path, class: "navbar-brand site-title" %>
 
-      <a class="navbar-brand site-title" href="/">
-        Redhead
-      </a>
+    <!-- MOBILE TOGGLER -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- CENTER + RIGHT WRAP -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
 
-      <div class="collapse navbar-collapse" id="mainNavbar">
+      <div class="d-flex w-100 align-items-lg-center">
 
-        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-4">
+        <!-- CENTER MENU -->
+        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-4 text-center">
 
           <li class="nav-item">
             <a class="nav-link" href="/blog">Blog</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Braces
-            </a>
 
-           
-            <ul class="dropdown-menu">
-              <%= link_to "Clear Glass Braces", braces_path("clear-glass-braces"), class: "dropdown-item" %>
-              <%= link_to "Hidden Lingual Braces", braces_path("hidden-lingual-braces"), class: "dropdown-item" %>
-              <%= link_to "Invisalign", braces_path("invisalign"), class: "dropdown-item" %>
-
-
-            </ul>
-
-
-          </li>
+          <%= link_to "Braces",
+                      types_of_braces_path,
+                      class: "nav-link dropdown-toggle" %>
+        
+          <ul class="dropdown-menu">
+        
+            <li>
+              <%= link_to "Clear Glass Braces",
+                          braces_path("clear-glass-braces"),
+                          class: "dropdown-item" %>
+            </li>
+        
+            <li>
+              <%= link_to "Hidden Lingual Braces",
+                          braces_path("hidden-lingual-braces"),
+                          class: "dropdown-item" %>
+            </li>
+        
+            <li>
+              <%= link_to "Invisalign",
+                          braces_path("invisalign"),
+                          class: "dropdown-item" %>
+            </li>
+        
+          </ul>
+        
+        </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
               Treatments
             </a>
-
             <ul class="dropdown-menu">
               <%= link_to "EARLY TREATMENT", treatment_path("early-treatment"), class: "dropdown-item" %>
               <%= link_to "WEDDING BRACES", treatment_path("wedding-braces"), class: "dropdown-item" %>
               <%= link_to "SMILE IN 5 MONTHS", treatment_path("smile-in-5-months"), class: "dropdown-item" %>
               <%= link_to "FACIAL SURGERY", treatment_path("facial-surgery"), class: "dropdown-item" %>
-
-
             </ul>
           </li>
 
@@ -60,30 +72,40 @@
           <li class="nav-item">
             <a class="nav-link" href="/results">Results</a>
           </li>
+
         </ul>
 
-        <!-- Contact -->
-        <div class="header-contact text-center text-lg-end mt-3 mt-lg-0">
+        <!-- RIGHT CONTACT -->
+        <div class="header-contact text-end d-none d-lg-block">
           <a href="tel:02076370777">020 7637 0777</a>
-          <span class="d-none d-lg-inline mx-2">|</span>
-          <a href="mailto:admin@redheadorthodontics.com">Email Us</a>
+          <span class="mx-2">|</span>
+          <a href="mailto:admin@redheadorthodontics.com">admin@redheadorthodontics.com</a>
         </div>
 
       </div>
 
     </div>
-  </nav>
-
-</header>
+  </div>
+</nav>
 
 <style>
 .site-title {
-  font-size: 28px;
+  font-size: 3.0rem;
   font-weight: 700;
+  color: #dc3545;
   text-decoration: none;
+  transition: 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.site-title:hover {
   color: #111;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
 .navbar-nav .nav-link {
   font-weight: 500;
   color: #222;

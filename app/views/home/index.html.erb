@@ -5,32 +5,36 @@
   </div>
 
   <div class="container position-relative">
-    <div class="row">
+    <div class="row justify-content-start">
       <div class="col-lg-6 col-md-12 hero-content">
         
-        <h1 class="hero-title">
-          Leading Orthodontics in the heart of London
-        </h1>
+      <h1 class="hero-title text-white fw-bold">
+  
+        <span class="display-2 d-block">
+          Leading Orthodontics
+        </span>
+      
+        <span class="d-block mt-2 hero-subtitle-line">
+          <span class="big-letter">I</span>N THE H<span class="big-letter">E</span>ART OF LONDON
+        </span>
+      
+      </h1>
 
-        <p class="hero-subtitle mt-3">
-          Specialist orthodontic care for children, teens and adults.
-        </p>
+      
+        <div class="hero-buttons mt-4 d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
+          <a href="/braces" class="btn btn-braces btn-lg">
+            Braces
+          </a>
 
-        <div class="hero-buttons mt-4 d-flex  gap-2 justify-content-center justify-content-lg-start">
+          <a href="/treatments" class="btn btn-treatments btn-lg">
+            Treatments
+          </a>
 
-  <a href="/braces" class="btn btn-braces btn-lg">
-    Braces
-  </a>
+          <a href="/appointments" class="btn btn-appointments btn-lg">
+            Appointments
+          </a>
 
-  <a href="/treatments" class="btn btn-treatments btn-lg">
-    Treatments
-  </a>
-
-  <a href="/appointments" class="btn btn-appointments btn-lg">
-    Appointments
-  </a>
-
-</div>
+        </div>
 
       </div>
     </div>
@@ -71,6 +75,23 @@
 
 <style>
 
+
+.hero-title {
+  line-height: 1.1;
+}
+
+.hero-subtitle-line {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+
+.big-letter {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+
 .hero-section {
   min-height: 90vh;
   position: relative;
@@ -101,13 +122,18 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-left: 40px;
-  margin-left: -30px;
+
+}
+
+@media (min-width: 992px) {
+  .hero-content {
+    margin-left: -30px;
+    transform: translateY(-25px);
+  }
 }
 
 .hero-title {
-  font-size: 48px;
-  font-weight: 700;
+  font-weight: 800;
   color: #1a1a1a;
   line-height: 1.2;
 }
