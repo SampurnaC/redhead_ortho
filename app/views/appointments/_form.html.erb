@@ -1,0 +1,146 @@
+<section class="container py-5">
+
+  <div class="row justify-content-center">
+
+    <div class="col-lg-10 col-xl-9">
+
+      <div class="card border-0 shadow-lg rounded-4">
+
+        <div class="card-body p-5">
+
+          <h1 class="text-center fw-bold mb-2">
+            Make an Appointment
+          </h1>
+
+          <hr class="mx-auto mb-5" style="width: 50px; border-width:3px;">
+
+          <%= form_with model: @appointment, local: true do |f| %>
+
+            <% if @appointment.errors.any? %>
+              <div class="alert alert-danger">
+                <h5>Please correct the following errors:</h5>
+                <ul class="mb-0">
+                  <% @appointment.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <%= f.label :name, "Your Name *", class: "form-label fw-semibold" %>
+                <%= f.text_field :name,
+                    class: "form-control form-control-lg",
+                    placeholder: "John Smith",
+                    required: true %>
+              </div>
+
+              <div class="col-md-6">
+                <%= f.label :email, "Your Email Address *", class: "form-label fw-semibold" %>
+                <%= f.email_field :email,
+                    class: "form-control form-control-lg",
+                    placeholder: "john@example.com",
+                    required: true %>
+              </div>
+
+              <div class="col-md-6">
+                <%= f.label :phone, "Phone Number *", class: "form-label fw-semibold" %>
+                <%= f.telephone_field :phone,
+                    class: "form-control form-control-lg",
+                    placeholder: "07123 456789",
+                    required: true %>
+              </div>
+
+              <div class="col-md-6">
+                <%= f.label :appointment_at, "Proposed Date & Time *", class: "form-label fw-semibold" %>
+                <%= f.datetime_local_field :appointment_at,
+                    class: "form-control form-control-lg",
+                    required: true %>
+              </div>
+
+              <div class="col-12">
+                <%= f.label :treatment_enquiry, "Treatment Enquiry *", class: "form-label fw-semibold" %>
+
+                <%= f.select :treatment_enquiry,
+                    [
+                      "Consultation",
+                      "Invisalign Aligner",
+                      "Lingual Brace",
+                      "Fixed Straight Wire Brace",
+                      "Active Removable Brace",
+                      "Functional Brace",
+                      "Fixed Functional Brace",
+                      "Smile in 5 Months",
+                      "Simpli 5 Clear Aligners",
+                      "Removable Retainer",
+                      "Fixed Bonded Retainer",
+                      "Repair To Bonded Retainer"
+                    ],
+                    { prompt: "Select a Treatment" },
+                    class: "form-select form-select-lg",
+                    required: true %>
+              </div>
+
+              <div class="col-12">
+                <%= f.label :message, "Your Message", class: "form-label fw-semibold" %>
+
+                <%= f.text_area :message,
+                    rows: 6,
+                    class: "form-control",
+                    placeholder: "Please specify your message." %>
+              </div>
+
+              <div class="col-12">
+
+                <div class="alert alert-warning mb-0">
+                  <strong>Please note:</strong> Appointments with Dr Redhead carry a
+                  <strong>£150 Consultation Fee</strong> which is refundable if you decide to go ahead with a Treatment Plan.
+                </div>
+
+              </div>
+
+              <div class="col-12">
+
+                <div class="alert alert-light border mb-3">
+                  <strong>Important information on Coronavirus (Covid-19).</strong><br>
+                  Before requesting an Appointment please read and confirm to our latest guidance on Coronavirus (Covid-19).
+                </div>
+
+                <div class="form-check">
+                  <%= f.check_box :covid_confirmation,
+                      class: "form-check-input",
+                      required: true %>
+
+                  <%= f.label :covid_confirmation,
+                      "Yes, I have read and understood Redhead Orthodontics Coronavirus (Covid-19) Guidance",
+                      class: "form-check-label" %>
+                </div>
+
+              </div>
+
+              <div class="col-12 text-center pt-3">
+
+                <%= f.submit "Book Appointment",
+                    class: "btn btn-danger btn-lg px-5 me-2" %>
+
+                <%= link_to "Back to Homepage",
+                    root_path,
+                    class: "btn btn-outline-dark btn-lg" %>
+
+              </div>
+
+            </div>
+
+          <% end %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

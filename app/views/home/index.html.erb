@@ -22,17 +22,14 @@
 
       
         <div class="hero-buttons mt-4 d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
-          <a href="/braces" class="btn btn-braces btn-lg">
-            Braces
-          </a>
+          
+          <%= link_to "BRACES", types_of_braces_path, class: "btn btn-braces btn-lg" %>
 
-          <a href="/treatments" class="btn btn-treatments btn-lg">
-            Treatments
-          </a>
+         
+          <%= link_to "TREATMENTS", treatments_path, class: "btn btn-treatments btn-lg" %>
 
-          <a href="/appointments" class="btn btn-appointments btn-lg">
-            Appointments
-          </a>
+
+          <%= link_to "MAKE AN APPOINTMENT", new_appointment_path, class: "btn btn-appointments btn-lg" %>
 
         </div>
 
@@ -144,14 +141,17 @@
 }
 
 .hero-buttons .btn {
-  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
-  padding: 12px 22px;
+  padding: 15px 28px;
+  min-width: 180px;
+  border-radius: 6px;
   border: none;
+  line-height: 1;
   transition: all 0.2s ease;
 }
-
-
 
 .btn-braces {
   background: #2f6fed;

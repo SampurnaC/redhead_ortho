@@ -17,6 +17,7 @@ class HomeController < ApplicationController
 
   def results
     @results=(1..9).to_a
+    @appointment=Appointment.new
   end
 
   def promise
@@ -26,6 +27,7 @@ class HomeController < ApplicationController
   end
 
   def treatment
+    @appointment=Appointment.new
     @slug=params[:slug]
     raise ApplicationController::RoutingError, "Not Found" unless TREATMENT_SLUGS.include?(@slug)
 

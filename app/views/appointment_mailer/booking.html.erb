@@ -1,0 +1,15 @@
+<h2>New Appointment Request</h2>
+
+<p><strong>Name:</strong> <%= @appointment.name %></p>
+
+<p><strong>Email:</strong> <%= @appointment.email %></p>
+
+<p><strong>Phone:</strong> <%= @appointment.phone %></p>
+
+<p><strong>Appointment Date and Time:</strong> <%= @appointment.appointment_at %></p>
+
+<p><strong>Treatment:</strong> <%= @appointment.treatment_enquiry %></p>
+
+<p><strong>Message:</strong></p>
+
+<p><%= simple_format(@appointment.message) %></p>
