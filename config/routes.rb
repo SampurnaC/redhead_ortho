@@ -22,4 +22,5 @@ Rails.application.routes.draw do
 
   get "/types-of-braces/:slug", to: "home#braces", as: :braces
 
+  get "/faq", to: "home#faq", as: :faq
 end

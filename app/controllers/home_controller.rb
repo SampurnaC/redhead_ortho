@@ -44,4 +44,8 @@ class HomeController < ApplicationController
   
   def promise
   end
+
+  def faq
+  end
+
 end
