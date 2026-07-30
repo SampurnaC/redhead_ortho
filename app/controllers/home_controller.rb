@@ -35,6 +35,7 @@ class HomeController < ApplicationController
   end
   
   def braces
+    @appointment=Appointment.new
     @slug=params[:slug]
     raise ApplicationController::RoutingError, "Not Found" unless BRACES_SLUGS.include?(@slug)
 
@@ -42,6 +43,7 @@ class HomeController < ApplicationController
   end
 
   def types_of_braces
+    @appointment=Appointment.new
   end
   
   def promise

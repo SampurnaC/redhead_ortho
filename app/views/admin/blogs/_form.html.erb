@@ -1,0 +1,69 @@
+<%= form_with model: [:admin, blog] do |form| %>
+
+
+  <% if blog.errors.any? %>
+
+    <div class="alert alert-danger">
+
+      <ul>
+        <% blog.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  <% end %>
+
+
+
+  <div class="mb-3">
+
+    <%= form.label :title,
+        class: "form-label" %>
+
+
+    <%= form.text_field :title,
+        class: "form-control" %>
+
+  </div>
+
+
+
+  <div class="mb-3">
+
+    <%= form.label :content,
+        class: "form-label" %>
+
+
+    <%= form.text_area :content,
+        rows: 10,
+        class: "form-control" %>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="form-check mb-3">
+
+    <%= form.check_box :published,
+        class: "form-check-input" %>
+
+
+    <%= form.label :published,
+        class: "form-check-label" %>
+
+  </div>
+
+
+
+  <%= form.submit class: "btn btn-primary" %>
+
+
+<% end %>

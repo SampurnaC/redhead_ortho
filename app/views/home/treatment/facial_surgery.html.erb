@@ -1,0 +1,432 @@
+<!-- ================= TOP SECTION ================= -->
+<section class="container py-5 text-center">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <h1 class="display-4 mb-4">
+      Facial Surgery
+    </h1>
+
+    <p class="lead leadtext mb-4">
+      Facial Surgery also called Orthognathic Surgery, is corrective surgery of the jaws.
+    </p>
+
+    <p class="mb-4">
+      Jaw surgery can make parts of your face more reasonable in size to improve your facial appearance and profile; which hopefully results in increased self-esteem and confidence.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= HERO IMAGE ================= -->
+<div class="treatment-hero-fullwidth">
+  <%= image_tag "treatments/redhead-orthognatic-surgery-web.jpg",
+      class: "treatment-hero-img",
+      alt: "Redhead Orthodontics Orthognathic Surgery" %>
+</div>
+
+<!-- ================= CONTENT SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <p>
+      You may be unhappy with a large, small or asymmetrical lower jaw (mandible) or upper jaw (maxilla).
+    </p>
+
+    <p>
+      Jaw surgery can enhance the effects of facelifts, neck lifts, fillers, lip position and fullness, by addressing not only the soft tissue but the supporting facial skeleton and the teeth.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TWO IMAGE CARDS ================= -->
+<section class="container py-5">
+
+  <div class="row justify-content-center g-4">
+
+    <!-- CARD 1 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <%= image_tag "treatments/max_fax_leaflet_big_jaw_asdjusted.jpg",
+            class: "card-img-top img-fluid",
+            alt: "Jaw Before Surgery" %>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <%= image_tag "treatments/max_fax_leaflet_big_jaw_adjusted2_class_3b_adjusted.jpg",
+            class: "card-img-top img-fluid",
+            alt: "Jaw After Surgery" %>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SINGLE CAPTION -->
+  <div class="text-center mt-3">
+    <p class="fst-italic">
+      A large lower jaw before and after surgery
+    </p>
+  </div>
+
+</section>
+
+
+<!-- ================= CONTENT SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <p>
+      Redhead Orthodontics works with colleagues across the various specialities to achieve these optimal results.
+    </p>
+
+    <h3 class="fw-bold mt-4 mb-3">
+      Reshaping your face with orthodontics and corrective surgery
+    </h3>
+
+    <p>
+      There are many reasons for having surgery:
+    </p>
+
+    <ul>
+      <li>If your jaws don’t meet correctly and your teeth don’t seem to fit your jaws, you might have a bite problem.</li>
+      <li>If you are not happy with the way you look</li>
+      <li>Your bones and teeth may have grown unusually, or</li>
+      <li>Your face may have been injured.</li>
+    </ul>
+
+    <p>
+      Whatever the reason, repositioning your teeth and facial bones can create a more balanced appearance with jaws that work together well.
+    </p>
+
+  </div>
+
+</section>
+
+<% videos = [
+  { id: "YZUOBscnXqI", title: "Surgery to reduce the size of the lower jaw" },
+  { id: "FC5M3dAjn1c", title: "Surgery to reduce prominent teeth" },
+  { id: "g0yChIZWjw8", title: "Surgery to reduce a gummy smile" }
+] %>
+
+<!-- ================= YOUTUBE VIDEOS ================= -->
+<section class="container py-5">
+
+  <div class="row g-4">
+
+    <% videos.each do |video| %>
+
+      <div class="col-md-4">
+
+        <div class="position-relative">
+
+          <a href="https://www.youtube.com/watch?v=<%= video[:id] %>" target="_blank">
+
+            <img
+              src="https://img.youtube.com/vi/<%= video[:id] %>/hqdefault.jpg"
+              class="img-fluid rounded shadow"
+              alt="<%= video[:title] %>"
+            >
+
+            <!-- TEXT OVERLAY -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-start justify-content-center">
+              <span class="bg-dark bg-opacity-75 text-white px-3 py-2 mt-2 rounded">
+                <%= video[:title] %>
+              </span>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTENT SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <p>
+      Your Orthognathic team consists of the orthodontist Dr Alex Redhead who specialises in straightening teeth and the surgeon Dr Collier specialising in jaw surgery.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Who is the surgeon that will be treating me?
+    </h3>
+
+    <p>
+      Dr Jonathan Collier is a Consultant Orthognathic Surgeon at the Chelsea and Westminster Hospital and several private hospitals in London.
+    </p>
+
+    <p>
+      Initially, Dr Redhead uses braces to move your teeth into the correct position for your bite you will have after surgery. Then Mr Collier reshapes your jaw and perhaps other facial bones to give you a better bite and a more pleasing appearance.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Do you need Orthodontic Surgery?
+    </h3>
+
+    <p>
+      Think about the questions below they can be a good starting point for discussing orthognathic surgery with your orthodontist and surgeon.
+    </p>
+
+    <ul>
+      <li>Do you have a problem with biting or chewing?</li>
+      <li>Do your lower teeth hit the roof of your mouth when you eat?</li>
+      <li>Have you noticed wear on your teeth?</li>
+      <li>Do you like the way you look from the front? Do you like your profile?</li>
+      <li>Do you understand your reasons for wanting to change your face and bite?</li>
+      <li>Will surgery interfere with your life now?</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTENT SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <h3 class="fw-bold mb-3">
+      The framework of your face
+    </h3>
+
+    <p>
+      Just as bones give shape to your whole body bones also form the frame of your face. The size and position of facial bones and the teeth in them determine how well you bite and how you look. If any of these bones are misshapen, your appearance can change.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Normal facial anatomy
+    </h3>
+
+    <p>
+      If your teeth come together evenly when you chew, you have a normal bite. If the relationship between your nose lips and chin is a pleasing one, you have a proportional appearance or profile.
+    </p>
+
+    <p>
+      You have a normal bite if all of your upper teeth and lower teeth are aligned correctly and bite together evenly – your front top teeth should overlap your front lower teeth slightly.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= TWO IMAGE CARDS ================= -->
+<section class="container py-5">
+
+  <div class="row justify-content-center g-4">
+
+    <!-- CARD 1 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <%= image_tag "treatments/facial_proportional_web1.jpg",
+            class: "card-img-top img-fluid",
+            alt: "Jaw Before Surgery" %>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <%= image_tag "treatments/facial_proportional_web2.jpg",
+            class: "card-img-top img-fluid",
+            alt: "Jaw After Surgery" %>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTENT SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <h3 class="fw-bold mb-3">
+      A facial imbalance
+    </h3>
+
+    <p>
+      If your jaws and face are out of proportion, incorrectly shaped bones can cause uneven development of your jaws which may also be caused by injury to the face. You may have one or a combination of these facial imbalances.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      The orthodontist role
+    </h3>
+
+    <p>
+      Alex Redhead will examine the position of your teeth and determines how braces will prepare your bite for surgery.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      The surgeon’s role
+    </h3>
+
+    <p>
+      Mr Collier studies your jaws to determine how to reposition the bones to improve the function of your jaw.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Before beginning treatment
+    </h3>
+
+    <p>
+      You need to visit your general dentist to check for the presence of untreated gum disease and any other dental work that needs doing before beginning treatment.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Aligning your teeth
+    </h3>
+
+    <p>
+      Dr Redhead will properly position your teeth for the bite you will have after surgery. You may be wearing braces for 6 to 18 months before surgery, and up to a year afterwards – depending on teeth position and the type of surgery.
+    </p>
+
+    <p>
+      During operation time, you’ll see Dr Redhead about every six weeks for adjustments. Because he is positioning your teeth for the bite you have after surgery it may seem like your braces are making your bite worse than it was before – so do not be alarmed.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Checking your progress
+    </h3>
+
+    <p>
+      At first, Mr Collier may want to see you every couple of months to plan surgery and monitor your progress. As surgery nears, your visits may increase. Before surgery, Dr Redhead and Mr Collier may perform one or more simulated or mock operations on digital or plaster models of your teeth to plan each detail of the proposed surgery.
+    </p>
+
+    <p>
+      Take time to ask them both any questions you may have. Also, get the support you need from your family and friends. As your surgery date nears Mr Collier may recommend soft food recipes, this lets you experiment and stock up on the foods you will need after surgery.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Your surgical experience
+    </h3>
+
+    <p>
+      Before surgery, you will have some laboratory tests to check you are fit enough for the operation. We perform the surgery in a private hospital environment, and you will receive IV fluids and medication to prevent dehydration and infection. The medicines also help limit swelling and control pain.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Risks and complications
+    </h3>
+
+    <p>
+      As with any surgery, there are some risks and complications. You may experience some pain and swelling in your face and neck, which usually goes within a couple of weeks. Your face may feel stiff or numb for several months. During healing, there is a risk of infection or the bone shifting as you heal Mr Collier will discuss these or any other risks and complications with you before surgery.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Fixation of the Bones
+    </h3>
+
+    <p>
+      To aid healing your bones are kept from moving using either screws plates or an occlusal splint or a combination of both to secure the bite temporarily. Screws and plates are usually not removed once the bones have healed.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FEATURE IMAGE ================= -->
+<section class="container py-5">
+
+  <div class="text-center">
+
+    <%= image_tag "treatments/postsurgery_xray1.jpg",
+        class: "img-fluid rounded shadow",
+        style: "max-width: 1000px; width: 100%;",
+        alt: "Facial Surgery" %>
+
+    <p class="mt-3 fst-italic text-muted">
+    Fixation of the Bones
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HEALING SECTION ================= -->
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 900px;">
+
+    <h3 class="fw-bold mb-3">
+      Healing after surgery
+    </h3>
+
+    <p>
+      When you first wake up, you may feel groggy from the anaesthesia; you will notice the swelling and numbness you will be given pain medication to ease any discomfort. If you have difficulty speaking using paper and pencil may help. Try to get out of bed as soon as possible. Walk around to increase your circulation, reduce swelling and speed recovery. Begin some form of oral hygiene as soon as you can using a mouth wash, rinse, or a child’s toothbrush. Your surgeon will check on you after surgery, and you may be able to go home that same day although an overnight stay could be required.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Recovery at home
+    </h3>
+
+    <p>
+      You may be off work or school for up to 2 weeks as you recover, and although most of the swelling and numbness should have gone after several weeks – you may still feel puffy or numb. Drink lots of fluid to prevent dehydration and help your body heal. Begin a sift diet according to your doctor’s recommendations. You may notice a subtle change in your appearance, but if your appearance changes dramatically, expect that your family and friends may be surprised at the difference. Take time to explain to them you are the same person, and you may need them to help and support you now throughout the recovery.
+    </p>
+
+    <p>
+      You will continue to see Dr Redhead about every six weeks for six months to a year to make sure teeth are in the correct position for your new readjusted jaw. Dr Redhead will adjust your braces and make sure your teeth are moving as planned. After six to twelve months, your teeth should be in position, and we can remove your braces.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Final Stages
+    </h3>
+
+    <p>
+      Depending on the type of surgery you have, you may go back to work or school in about two weeks. You may want to begin with half days you can usually become fully active over a couple of months trying to avoid injury to your face.
+    </p>
+
+    <p>
+      Dr Redhead and Mr Collier may recommend you progress from liquid food to soft foods and then to regular foods over several weeks. They may recommend a physio to teach you facial exercises that improve your jaw’s range of motion.
+    </p>
+
+    <p>
+      Expect your friends or co-workers may be surprised about your appearance instead of waiting for them to say something, you may want to bring it up first.
+    </p>
+
+    <p>
+      After your braces come off, we will give you retainers to help you maintain the position of your teeth; which you will need to wear every night forever to avoid the teeth moving into an inferior position.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      The new you
+    </h3>
+
+    <p>
+      By working with a skilled team, you can have your teeth and the bones in your jaws moved to a more balanced and functional position you may be pleasantly surprised at the difference it makes and how your face looks and feels.
+    </p>
+
+    <h3 class="fw-bold mt-5 mb-3">
+      Temporomandibular Joint (TMJ) Pain and Myofacial Dysfunction
+    </h3>
+
+    <p>
+      Many patients have surgery recommended to relieve Jaw pain. There is no conclusive scientific evidence to show that jaw surgery individually or in combination with Orthodontics can correct this problem. You should guard against undertaking this type of surgery purely for the correction of this problem.
+    </p>
+
+  </div>
+
+</section>

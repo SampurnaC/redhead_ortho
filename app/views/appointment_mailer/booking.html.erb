@@ -1,15 +1,72 @@
-<h2>New Appointment Request</h2>
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; color: #333;">
 
-<p><strong>Name:</strong> <%= @appointment.name %></p>
+  <div style="background-color: #1f4e79; padding: 20px; text-align: center;">
+    <h2 style="color: white; margin: 0;">
+      New Appointment Request
+    </h2>
+  </div>
 
-<p><strong>Email:</strong> <%= @appointment.email %></p>
+  <div style="padding: 20px;">
 
-<p><strong>Phone:</strong> <%= @appointment.phone %></p>
+    <p>
+      Hi Team,
+    </p>
 
-<p><strong>Appointment Date and Time:</strong> <%= @appointment.appointment_at %></p>
+    <p>
+      A new patient has requested an appointment with <strong>Dr Redhead</strong>.
+      Please review the details below and action this request as soon as possible.
+    </p>
 
-<p><strong>Treatment:</strong> <%= @appointment.treatment_enquiry %></p>
+    <hr>
 
-<p><strong>Message:</strong></p>
+    <h3 style="color: #1f4e79;">Patient Details</h3>
 
-<p><%= simple_format(@appointment.message) %></p>
+    <p>
+      <strong>Name:</strong><br>
+      <%= @appointment.name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong><br>
+      <%= @appointment.email %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong><br>
+      <%= @appointment.phone %>
+    </p>
+
+    <h3 style="color: #1f4e79;">Appointment Details</h3>
+
+    <p>
+      <strong>Preferred Appointment Date & Time:</strong><br>
+      <%= @appointment.appointment_at.strftime("%d %B %Y at %I:%M %p") if @appointment.appointment_at.present? %>
+    </p>
+
+    <p>
+      <strong>Treatment Enquiry:</strong><br>
+      <%= @appointment.treatment_enquiry %>
+    </p>
+
+    <h3 style="color: #1f4e79;">Health Information</h3>
+
+    <p>
+        <strong>Coronavirus (Covid-19) Guidance Confirmation:</strong><br>
+        <%= @appointment.covid_confirmation ? "Yes, patient has read and understood the Redhead Orthodontics Coronavirus (Covid-19) Guidance" : "No, patient has not confirmed the Covid-19 guidance" %>
+    </p>
+
+    <h3 style="color: #1f4e79;">Message</h3>
+
+    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+      <%= simple_format(@appointment.message) %>
+    </div>
+
+    <hr>
+
+    <p style="font-size: 12px; color: #777;">
+      This appointment request was submitted through the Redhead Orthodontics website.
+    </p>
+
+  </div>
+
+</div>

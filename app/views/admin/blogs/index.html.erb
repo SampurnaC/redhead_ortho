@@ -1,0 +1,86 @@
+<div class="container mt-5">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Blogs</h1>
+
+    <%= link_to "New Blog",
+        new_admin_blog_path,
+        class: "btn btn-primary" %>
+  </div>
+
+
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Created</th>
+        <th width="250">Actions</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+      <% @blogs.each do |blog| %>
+
+        <tr>
+
+          <td>
+            <%= blog.title %>
+          </td>
+
+          <td>
+            <%= blog.content %>
+          </td>
+
+          <td>
+            <% if blog.published %>
+              <span class="badge bg-success">
+                Published
+              </span>
+            <% else %>
+              <span class="badge bg-secondary">
+                Draft
+              </span>
+            <% end %>
+          </td>
+
+
+          <td>
+            <%= blog.created_at.strftime("%d %b %Y") %>
+          </td>
+
+
+          <td>
+
+            <%= link_to "View",
+                admin_blog_path(blog),
+                class: "btn btn-sm btn-outline-primary" %>
+
+
+            <%= link_to "Edit",
+                edit_admin_blog_path(blog),
+                class: "btn btn-sm btn-outline-warning" %>
+
+
+            <%= link_to "Delete",
+                admin_blog_path(blog),
+                data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                },
+                class: "btn btn-sm btn-outline-danger" %>
+
+          </td>
+
+        </tr>
+
+      <% end %>
+
+    </tbody>
+
+  </table>
+
+</div>

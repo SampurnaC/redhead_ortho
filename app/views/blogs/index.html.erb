@@ -1,0 +1,41 @@
+<div class="container mt-5">
+
+  <h1>Blogs</h1>
+
+  <div class="row">
+
+    <% @blogs.each do |blog| %>
+
+      <div class="col-md-4 mb-4">
+
+        <div class="card">
+
+         
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+              <%= blog.title %>
+            </h5>
+
+
+            <p class="card-text">
+              <%= truncate(blog.content, length: 150) %>
+            </p>
+
+
+            <%= link_to "Read More",
+                blog_path(blog),
+                class: "btn btn-primary" %>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

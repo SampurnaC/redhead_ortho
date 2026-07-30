@@ -21,17 +21,39 @@
       </h1>
 
       
-        <div class="hero-buttons mt-4 d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
-          
-          <%= link_to "BRACES", types_of_braces_path, class: "btn btn-braces btn-lg" %>
+      <div class="hero-buttons mt-5">
 
-         
-          <%= link_to "TREATMENTS", treatments_path, class: "btn btn-treatments btn-lg" %>
-
-
-          <%= link_to "MAKE AN APPOINTMENT", new_appointment_path, class: "btn btn-appointments btn-lg" %>
-
+      <div class="row g-3">
+    
+        <div class="col-12 col-md-6">
+          <%= link_to "BRACES",
+              types_of_braces_path,
+              class: "btn btn-braces btn-lg w-100" %>
         </div>
+    
+        <div class="col-12 col-md-6">
+          <%= link_to "TREATMENTS",
+              treatments_path,
+              class: "btn btn-treatments btn-lg w-100" %>
+        </div>
+    
+        <div class="col-12 col-md-6">
+          <%= link_to "REQUEST A CONSULTATION",
+              new_appointment_path,
+              class: "btn btn-consultation btn-lg w-100" %>
+        </div>
+    
+        <div class="col-12 col-md-6">
+          <%= link_to "BOOK ONLINE",
+              "https://redhead-orthodontics.portal.dental/",
+              class: "btn btn-dentally btn-lg w-100",
+              target: "_blank",
+              rel: "noopener" %>
+        </div>
+    
+      </div>
+    
+    </div>
 
       </div>
     </div>
@@ -181,5 +203,66 @@
 .btn-appointments:hover {
   background: #179c79;
   transform: translateY(-2px);
+}
+.hero-buttons .btn {
+  padding: 16px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all .3s ease;
+  letter-spacing: .5px;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.15);
+}
+
+/* Braces */
+.btn-braces {
+  background: #0F4C81;
+  color: #fff;
+  border: none;
+}
+
+.btn-braces:hover {
+  background: #0C3D66;
+  color: #fff;
+}
+
+/* Treatments */
+.btn-treatments {
+  background: #20A39E;
+  color: #fff;
+  border: none;
+}
+
+.btn-treatments:hover {
+  background: #19857F;
+  color: #fff;
+}
+
+/* Consultation */
+.btn-consultation {
+  background: #F4A261;
+  color: #fff;
+  border: none;
+}
+
+.btn-consultation:hover {
+  background: #E58E45;
+  color: #fff;
+}
+
+/* Dentally */
+.btn-dentally {
+  background: #2E7D32;
+  color: #fff;
+  border: none;
+}
+
+.btn-dentally:hover {
+  background: #256628;
+  color: #fff;
 }
 </style>

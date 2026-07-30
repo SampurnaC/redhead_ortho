@@ -20,7 +20,7 @@
         <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-4 text-center">
 
           <li class="nav-item">
-            <a class="nav-link" href="/blog">Blog</a>
+            <%= link_to "Blog", blogs_path, class: "nav-link" %>
           </li>
 
           <li class="nav-item dropdown">
@@ -54,9 +54,9 @@
         </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Treatments
-            </a>
+          <%= link_to "Treatments",
+          treatments_path,
+          class: "nav-link dropdown-toggle", target: "_blank" %>
             <ul class="dropdown-menu">
               <%= link_to "EARLY TREATMENT", treatment_path("early-treatment"), class: "dropdown-item" %>
               <%= link_to "WEDDING BRACES", treatment_path("wedding-braces"), class: "dropdown-item" %>
