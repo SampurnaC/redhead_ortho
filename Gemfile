@@ -66,3 +66,4 @@ end
 
 
 gem "devise", "~> 5.0"
+gem 'carrierwave', '~> 3.0'
