@@ -4,7 +4,7 @@
     <%= image_tag "redhead_hero_image.jpg", class: "hero-bg-img" %>
   </div>
 
-  <div class="container position-relative">
+  <div class="container-fluid position-relative px-5">
     <div class="row justify-content-start">
       <div class="col-lg-6 col-md-12 hero-content">
         
@@ -20,18 +20,17 @@
       
       </h1>
 
-      
       <div class="hero-buttons mt-5">
 
       <div class="row g-3">
     
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <%= link_to "BRACES",
               types_of_braces_path,
               class: "btn btn-braces btn-lg w-100" %>
         </div>
     
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <%= link_to "TREATMENTS",
               treatments_path,
               class: "btn btn-treatments btn-lg w-100" %>
@@ -46,7 +45,7 @@
         <div class="col-12 col-md-6">
           <%= link_to "BOOK ONLINE",
               "https://redhead-orthodontics.portal.dental/",
-              class: "btn btn-dentally btn-lg w-100",
+              class: "btn btn-warning btn-lg w-100",
               target: "_blank",
               rel: "noopener" %>
         </div>
@@ -54,6 +53,7 @@
       </div>
     
     </div>
+      
 
       </div>
     </div>
@@ -141,7 +141,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
-
+  max-width: 850px;
 }
 
 @media (min-width: 992px) {
@@ -152,9 +152,9 @@
 }
 
 .hero-title {
-  font-weight: 800;
-  color: #1a1a1a;
-  line-height: 1.2;
+  font-weight: 1000;
+  line-height: 1.05;
+  margin-bottom: 0;
 }
 
 .hero-subtitle {
@@ -162,18 +162,7 @@
   color: #444;
 }
 
-.hero-buttons .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  padding: 15px 28px;
-  min-width: 180px;
-  border-radius: 6px;
-  border: none;
-  line-height: 1;
-  transition: all 0.2s ease;
-}
+
 
 .btn-braces {
   background: #2f6fed;
@@ -204,19 +193,36 @@
   background: #179c79;
   transform: translateY(-2px);
 }
+
+
+
+
 .hero-buttons .btn {
-  padding: 16px 28px;
-  font-size: 1rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 70px;
+
+  padding: 18px 30px;
+
+  font-weight: 700;
+
+  letter-spacing: .8px;
+
   border-radius: 12px;
+
   transition: all .3s ease;
-  letter-spacing: .5px;
 }
 
+
 .hero-buttons .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0,0,0,.15);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.18);
 }
+
+
+
 
 /* Braces */
 .btn-braces {
@@ -255,14 +261,11 @@
 }
 
 /* Dentally */
-.btn-dentally {
-  background: #2E7D32;
+.btn-warning {
   color: #fff;
-  border: none;
 }
 
-.btn-dentally:hover {
-  background: #256628;
+.btn-warning:hover {
   color: #fff;
 }
 </style>
