@@ -1,3 +1,4 @@
+
 # PostgreSQL. Versions 9.3 and up are supported.
 #
 # Install the pg driver:
@@ -81,17 +82,18 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: redhead_ortho_production
-    username: redhead_ortho
-    password: <%= ENV["REDHEAD_ORTHO_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
+
   cache:
     <<: *primary_production
     database: redhead_ortho_production_cache
     migrations_paths: db/cache_migrate
+
   queue:
     <<: *primary_production
     database: redhead_ortho_production_queue
     migrations_paths: db/queue_migrate
+
   cable:
     <<: *primary_production
     database: redhead_ortho_production_cable

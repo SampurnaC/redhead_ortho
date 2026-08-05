@@ -23,10 +23,8 @@
             <p>
               A removeable transparent brace made of thin plastic that only covers your teeth and does not affect your speech.
             </p>
-
-            <a href="#" class="brace-btn">
-              [ learn more ]
-            </a>
+        
+            <%= link_to "[ learn more ]", braces_path(slug: "invisalign"), class: "brace-btn" %>
           </div>
 
         </div>
@@ -45,9 +43,8 @@
               Worn on the inside of your teeth this really is considered the ultimate in invisible braces as it cannot be seen.
             </p>
 
-            <a href="#" class="brace-btn">
-              [ learn more ]
-            </a>
+            <%= link_to "[ learn more ]", braces_path(slug: "hidden-lingual-braces"), class: "brace-btn" %>
+
           </div>
 
         </div>
@@ -66,9 +63,9 @@
               Worn on the outside of your teeth, to improve aesthetics you can have these with nearly invisible brackets.
             </p>
 
-            <a href="#" class="brace-btn">
-              [ learn more ]
-            </a>
+            <%= link_to "[ learn more ]", braces_path(slug: "clear-glass-braces"), class: "brace-btn" %>
+
+
           </div>
 
         </div>
@@ -149,7 +146,7 @@
 .coming-soon {
   text-decoration: none;
   font-weight: 700;
-  color: #0d6efd;
+  color: red;
   text-transform: lowercase;
 }
 
