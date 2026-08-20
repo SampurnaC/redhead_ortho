@@ -32,6 +32,12 @@ Rails.application.routes.draw do
 
   get "data-security-policy", to: "home#data_security_policy"
 
+  get "practice-policies", to: "home#practice_policies"
+
+  get "cookie-policies", to: "home#cookie_policies"
+
+
+
   resources :appointments, only: [:new, :create]
 
 

@@ -55,4 +55,10 @@ class HomeController < ApplicationController
   def data_security_policy
   end
 
+  def practice_policies
+  end
+
+  def cookie_policies
+  end
+
 end

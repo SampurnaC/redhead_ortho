@@ -60,11 +60,11 @@
     <div class="col-12 col-md-6 text-center">
 
       <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg"
+        <img src="https://img.youtube.com/vi/nYcR0WqMPvY/hqdefault.jpg"
              alt="Clear Braces Video"
              class="img-fluid rounded-4 shadow">
 
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID"
+        <a href="https://www.youtube.com/watch?v=nYcR0WqMPvY"
            target="_blank"
            class="video-play">
           ▶
@@ -99,13 +99,12 @@
 
     <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
 
-      <a href="#" class="btn btn-primary btn-lg rounded-pill px-4">
-        SEE OUR RANGE OF BRACES
-      </a>
+     
+      <%= link_to "SEE OUR RANGE OF BRACES", braces_path, class: "btn btn-primary btn-lg rounded-pill px-4", target: "_blank" %>
 
-      <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold">
-        TAKE THE BEST BRACE QUIZ
-      </a>
+     
+      <%= link_to "TAKE THE BEST BRACE QUIZ", quiz_path, class: "btn btn-warning btn-lg rounded-pill px-4 fw-semibold", target: "_blank" %>
+
 
       <a href="#" class="btn btn-outline-dark btn-lg rounded-pill px-4">
         READ OUR GOOGLE REVIEWS
