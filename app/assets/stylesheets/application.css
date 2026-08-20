@@ -32,3 +32,246 @@ h1, h2, h3, h4, h5, p, ul, div, .site-title {
 
 
 }
+
+
+
+
+
+/* ==========================================
+   QUIZ
+   ========================================== */
+
+   .quiz-page {
+    min-height: 100vh;
+    background: #f6f7fb;
+    padding: 60px 15px;
+  }
+  
+  
+  /* ==========================================
+     CARD
+     ========================================== */
+  
+  .quiz-card {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  
+    background: #ffffff;
+  
+    border-radius: 20px;
+  
+    padding: 45px;
+  
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.08);
+  }
+  
+  
+  /* ==========================================
+     STEP
+     ========================================== */
+  
+  .quiz-step {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+  
+    margin-bottom: 12px;
+  }
+  
+  
+  /* ==========================================
+     PROGRESS
+     ========================================== */
+  
+  .quiz-progress {
+    width: 100%;
+    height: 7px;
+  
+    background: #e9ecef;
+  
+    border-radius: 20px;
+  
+    overflow: hidden;
+  
+    margin-bottom: 35px;
+  }
+  
+  .quiz-progress-bar {
+    height: 100%;
+  
+    background: #0d6efd;
+  
+    border-radius: 20px;
+  }
+  
+  
+  /* ==========================================
+     TITLE
+     ========================================== */
+  
+  .quiz-title {
+    font-size: 32px;
+    font-weight: 700;
+  
+    line-height: 1.25;
+  
+    margin-bottom: 15px;
+  
+    color: #212529;
+  }
+  
+  
+  /* ==========================================
+     DESCRIPTION
+     ========================================== */
+  
+  .quiz-description {
+    color: #6c757d;
+  
+    line-height: 1.7;
+  
+    margin-bottom: 30px;
+  }
+  
+  
+  /* ==========================================
+     ANSWERS
+     ========================================== */
+  
+  .quiz-answer {
+    position: relative;
+  
+    margin-bottom: 12px;
+  }
+  
+  
+  .quiz-answer input {
+    position: absolute;
+  
+    opacity: 0;
+  }
+  
+  
+  .quiz-answer label {
+    display: block;
+  
+    width: 100%;
+  
+    padding: 17px 20px;
+  
+    border: 2px solid #e9ecef;
+  
+    border-radius: 12px;
+  
+    background: #ffffff;
+  
+    cursor: pointer;
+  
+    font-weight: 500;
+  
+    transition: all 0.2s ease;
+  }
+  
+  
+  .quiz-answer label:hover {
+    border-color: #0d6efd;
+  
+    background: #f8fbff;
+  }
+  
+  
+  .quiz-answer input:checked + label {
+    border-color: #0d6efd;
+  
+    background: #eef5ff;
+  
+    color: #0d6efd;
+  }
+  
+  
+  /* ==========================================
+     NAVIGATION
+     ========================================== */
+  
+  .quiz-navigation {
+    display: flex;
+  
+    justify-content: space-between;
+  
+    align-items: center;
+  
+    margin-top: 35px;
+  }
+  
+  
+  .quiz-previous {
+    color: #6c757d;
+  
+    text-decoration: none;
+  
+    font-weight: 500;
+  }
+  
+  
+  .quiz-previous:hover {
+    color: #0d6efd;
+  }
+  
+  
+  .quiz-next {
+    padding: 11px 28px;
+  
+    border-radius: 10px;
+  }
+  
+  
+  /* ==========================================
+     FORM INPUTS
+     ========================================== */
+  
+  .quiz-card .form-control {
+    padding: 13px 15px;
+  
+    border-radius: 10px;
+  
+    border: 1px solid #dee2e6;
+  }
+  
+  
+  .quiz-card .form-control:focus {
+    border-color: #0d6efd;
+  
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+  }
+  
+  
+  /* ==========================================
+     MOBILE
+     ========================================== */
+  
+  @media (max-width: 576px) {
+  
+    .quiz-page {
+      padding: 20px 12px;
+    }
+  
+  
+    .quiz-card {
+      padding: 25px 20px;
+  
+      border-radius: 16px;
+    }
+  
+  
+    .quiz-title {
+      font-size: 26px;
+    }
+  
+  
+    .quiz-navigation {
+      margin-top: 25px;
+    }
+  
+  }

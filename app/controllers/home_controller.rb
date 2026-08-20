@@ -52,4 +52,7 @@ class HomeController < ApplicationController
   def faq
   end
 
+  def data_security_policy
+  end
+
 end

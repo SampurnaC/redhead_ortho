@@ -1,0 +1,90 @@
+<div class="quiz-page">
+
+  <div class="quiz-card">
+
+    <div class="quiz-step">
+      Step 7 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 78%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      What matters to you the most?
+    </h1>
+
+
+    <p class="quiz-description">
+      Please click just one option — the most important
+      feature of the brace that you are looking for.
+    </p>
+
+
+    <%= form_with url: "/quiz/5",
+                  method: :post,
+                  local: true do %>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :priority,
+            "comfort",
+            session[:quiz]["priority"] == "comfort",
+            required: true,
+            id: "priority_comfort" %>
+
+        <%= label_tag "priority_comfort",
+            "Comfort of the brace" %>
+
+      </div>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :priority,
+            "speed",
+            session[:quiz]["priority"] == "speed",
+            id: "priority_speed" %>
+
+        <%= label_tag "priority_speed",
+            "Speed of treatment" %>
+
+      </div>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :priority,
+            "invisible",
+            session[:quiz]["priority"] == "invisible",
+            id: "priority_invisible" %>
+
+        <%= label_tag "priority_invisible",
+            "Having a brace that no one can see" %>
+
+      </div>
+
+
+      <div class="quiz-navigation">
+
+        <a href="/quiz/4" class="quiz-previous">
+          ← Previous
+        </a>
+
+        <button class="btn btn-primary quiz-next">
+          Next →
+        </button>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>

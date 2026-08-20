@@ -1,0 +1,49 @@
+<div class="quiz-page">
+
+  <div class="quiz-card text-center">
+
+    <div class="quiz-step">
+      Step 9 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 100%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      Quiz Complete!
+    </h1>
+
+
+    <p class="quiz-description">
+      Are you ready for your result?
+      Please press the button below to find out
+      which type of brace may suit you best.
+    </p>
+
+
+    <%= form_with url: "/quiz/results",
+                  method: :post,
+                  local: true do %>
+
+      <div class="quiz-navigation">
+
+        <a href="/quiz/6" class="quiz-previous">
+          ← Previous
+        </a>
+
+        <button class="btn btn-primary quiz-next">
+          Get My Results
+        </button>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

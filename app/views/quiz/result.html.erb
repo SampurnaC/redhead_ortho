@@ -1,0 +1,58 @@
+<div class="quiz-page">
+
+  <div class="quiz-card text-center">
+
+
+    <h1 class="quiz-title">
+      Thank you, <%= @submission.first_name %>!
+    </h1>
+
+
+    <p class="quiz-description">
+      Based on your answers, the brace that may be
+      most suitable for you is:
+    </p>
+
+
+    <div class="alert alert-primary py-4">
+
+      <h2 class="mb-0">
+        <%= @submission.result %>
+      </h2>
+
+    </div>
+
+
+    <p class="text-muted mt-4">
+      This quiz is intended as a guide only.
+      A full assessment by an orthodontic professional
+      is required before treatment is recommended.
+    </p>
+
+
+    <div class="mt-4">
+
+      <a href="tel:02076370777"
+         class="btn btn-primary">
+
+        Call 0207 637 0777
+
+      </a>
+
+    </div>
+
+
+    <p class="mt-4 mb-0">
+
+      <a href="mailto:admin@redheadorthodontics.com">
+
+        admin@redheadorthodontics.com
+
+      </a>
+
+    </p>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,74 @@
+<div class="quiz-page">
+
+  <div class="quiz-card">
+
+    <div class="quiz-step">
+      Step 3 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 33%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      Do your teeth stick out?
+    </h1>
+
+
+    <p class="quiz-description">
+      Please select the answer that best describes your teeth.
+    </p>
+
+    <div class="text-center mb-4"> <%= image_tag "quiz/stick-out.jpg", class: "img-fluid rounded", style: "max-height: 350px; object-fit: cover;" %> </div>
+    <%= form_with url: "/quiz/1",
+                  method: :post,
+                  local: true do %>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :teeth_stick_out,
+            "yes",
+            session[:quiz]["teeth_stick_out"] == "yes",
+            required: true,
+            id: "teeth_yes" %>
+
+        <%= label_tag "teeth_yes", "Yes" %>
+
+      </div>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :teeth_stick_out,
+            "no",
+            session[:quiz]["teeth_stick_out"] == "no",
+            id: "teeth_no" %>
+
+        <%= label_tag "teeth_no", "No" %>
+
+      </div>
+
+
+      <div class="quiz-navigation">
+
+        <a href="/quiz" class="quiz-previous">
+          ← Previous
+        </a>
+
+        <button class="btn btn-primary quiz-next">
+          Next →
+        </button>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>

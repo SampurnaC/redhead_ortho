@@ -116,9 +116,17 @@
       Lingual Braces typically range in price between £4,400 – £9,000.
     </p>
 
-    <p>
-      MAKE AN APPOINTMENT LEARN MORE
-    </p>
+          
+    <div class="d-flex gap-3">
+    <%= link_to "MAKE AN APPOINTMENT",
+        new_appointment_path,
+        class: "btn btn-danger btn-lg" %>
+
+    <%= link_to "LEARN MORE",
+        braces_path(slug: "hidden-lingual-braces"),
+        class: "btn btn-outline-success btn-lg" %>
+  </div>
+
 
   </div>
 
@@ -150,9 +158,17 @@
       Invisalign Aligners typically range in price between £3,800 – £4,500.
     </p>
 
-    <p>
-      MAKE AN APPOINTMENT    LEARN MORE
-    </p>
+
+    <div class="d-flex gap-3">
+      <%= link_to "MAKE AN APPOINTMENT",
+          new_appointment_path,
+          class: "btn btn-danger btn-lg" %>
+
+      <%= link_to "LEARN MORE",
+          braces_path(slug: "invisalign"),
+          class: "btn btn-outline-success btn-lg" %>
+    </div>
+
 
   </div>
 
@@ -183,9 +199,15 @@
       Clear Braces typically range in price between £2,500 – £5,300.
     </p>
 
-    <p>
-      MAKE AN APPOINTMENT  LEARN MORE
-    </p>
+    <div class="d-flex gap-3">
+      <%= link_to "MAKE AN APPOINTMENT",
+          new_appointment_path,
+          class: "btn btn-danger btn-lg" %>
+
+      <%= link_to "LEARN MORE",
+          braces_path(slug: "clear-glass-braces"),
+          class: "btn btn-outline-success btn-lg" %>
+    </div>
 
   </div>
 
@@ -223,9 +245,12 @@
       Damon Braces typically range in price between £3,100 – £5,100.
     </p>
 
-    <p>
-      MAKE AN APPOINTMENT
-    </p>
+    <div class="d-flex gap-3">
+      <%= link_to "MAKE AN APPOINTMENT",
+          new_appointment_path,
+          class: "btn btn-danger btn-lg" %>
+
+    </div>
 
   </div>
 
@@ -245,6 +270,116 @@
   </div>
 
 </section>
+
+
+
+
+<!-- ================= BRACES FOR GROWING THE JAW ================= -->
+
+<section class="container py-5">
+
+  <div class="mx-auto" style="max-width: 1000px;">
+
+    <h2 class="mb-5">Braces for growing the jaw</h2>
+
+
+    <!-- ================= REMOVABLE TWIN BLOCK ================= -->
+
+    <div class="row align-items-center mb-5">
+
+      <div class="col-md-4">
+
+        <div class="card shadow border-0">
+
+          <%= image_tag "braces/removable-twin-bock.jpg",
+              class: "card-img-top",
+              alt: "Removable Twin Block" %>
+
+          <div class="card-body text-center">
+
+            <%= link_to "MAKE AN APPOINTMENT",
+                new_appointment_path,
+                class: "btn btn-danger w-100" %>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-8">
+
+        <h3>Removable Twin Block</h3>
+
+        <p>
+          This appliance helps bring back teeth which are sticking out
+          by maximising the genetic growth of the lower jaw, restraining
+          the growth of the top jaw, tipping the upper teeth back and
+          pushing the lower teeth forwards.
+        </p>
+
+        <p>
+          To work properly, the appliance needs to be worn 24 hours a day
+          for 6 to 9 months.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= FIXED TWIN BLOCK ================= -->
+
+    <div class="row align-items-center mb-5">
+
+      <div class="col-md-4">
+
+        <div class="card shadow border-0">
+
+          <%= image_tag "braces/fixed-twin-block.jpg",
+              class: "card-img-top",
+              alt: "Fixed Twin Block" %>
+
+          <div class="card-body text-center">
+
+            <%= link_to "MAKE AN APPOINTMENT",
+                new_appointment_path,
+                class: "btn btn-success w-100" %>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-8">
+
+        <h3>Fixed Twin Block</h3>
+
+        <p>
+          This is a fixed version of the growth modifying twin block
+          and ensures the patient actually wears the appliance as the
+          success of the twin block is completely related to hours of wear
+          – the more the better!!
+        </p>
+
+        <p>
+          Patients get used to this appliance in about 2 weeks.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
 
 <!-- ================= BRACES FOR EXPANDING THE JAW ================= -->
 <section class="container py-5">
@@ -267,7 +402,7 @@
         <div class="card-body text-center">
     
           <%= link_to "MAKE AN APPOINTMENT",
-              "#",
+              new_appointment_path,
               class: "btn btn-danger w-100" %>
     
         </div>
@@ -297,7 +432,7 @@
               alt: "Quad Helix" %>
 
           <div class="mt-3">
-            <%= link_to "MAKE AN APPOINTMENT", "#", class: "btn btn-success btn-lg" %>
+            <%= link_to "MAKE AN APPOINTMENT", new_appointment_path, class: "btn btn-success btn-lg" %>
           </div>
         </div>
 
@@ -326,7 +461,7 @@
             alt: "Rapid Maxillary Expanded" %>
 
         <div class="mt-3">
-          <%= link_to "MAKE AN APPOINTMENT", "#", class: "btn btn-warning btn-lg" %>
+          <%= link_to "MAKE AN APPOINTMENT", new_appointment_path, class: "btn btn-warning btn-lg" %>
         </div>
       </div>
 
@@ -355,7 +490,7 @@
             alt: "Pendulum Appliance" %>
 
         <div class="mt-3">
-          <%= link_to "MAKE AN APPOINTMENT", "#", class: "btn btn-danger btn-lg" %>
+          <%= link_to "MAKE AN APPOINTMENT", new_appointment_path, class: "btn btn-danger btn-lg" %>
         </div>
       </div>
 

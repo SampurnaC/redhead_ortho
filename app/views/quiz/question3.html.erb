@@ -1,0 +1,101 @@
+
+<div class="quiz-page">
+
+  <div class="quiz-card">
+
+    <div class="quiz-step">
+      Step 5 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 56%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      Is your smile too narrow?
+    </h1>
+
+
+    <p class="quiz-description">
+      Please look at the image below and select the answer
+      that best describes your smile.
+    </p>
+
+
+    <!-- Narrow smile image -->
+
+    <div class="narrow-smile-image">
+
+      <%= image_tag "quiz/narrow_smile.jpg",
+          class: "img-fluid" %>
+
+    </div>
+
+
+    <%= form_with url: "/quiz/3",
+                  method: :post,
+                  local: true do %>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :narrow_smile,
+            "yes",
+            session[:quiz]["narrow_smile"] == "yes",
+            required: true,
+            id: "narrow_yes" %>
+
+        <%= label_tag "narrow_yes", "Yes" %>
+
+      </div>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :narrow_smile,
+            "no",
+            session[:quiz]["narrow_smile"] == "no",
+            id: "narrow_no" %>
+
+        <%= label_tag "narrow_no", "No" %>
+
+      </div>
+
+
+      <div class="quiz-navigation">
+
+        <a href="/quiz/2" class="quiz-previous">
+          ← Previous
+        </a>
+
+        <button type="submit" class="btn btn-primary quiz-next">
+          Next →
+        </button>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>
+
+<style>
+.narrow-smile-image {
+  text-align: center;
+  margin: 25px 0 30px;
+}
+
+.narrow-smile-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+</style>

@@ -1,0 +1,104 @@
+<div class="quiz-page">
+
+  <div class="quiz-card">
+
+    <div class="quiz-step">
+      Step 1 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 11%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      Which brace is best for me?
+    </h1>
+
+
+    <p class="quiz-description">
+      Use this simple test to find out which brace
+      may be best for you. It should only take
+      about a minute to complete.
+    </p>
+
+
+    <%= form_with url: "/quiz",
+                  method: :post,
+                  local: true do %>
+
+
+      <div class="mb-4">
+
+        <%= label_tag :first_name,
+            "Your first name",
+            class: "form-label fw-semibold" %>
+
+        <%= text_field_tag :first_name,
+            session[:quiz]["first_name"],
+            class: "form-control",
+            required: true %>
+
+      </div>
+
+
+      <div class="mb-4">
+
+        <%= label_tag :last_name,
+            "Your surname",
+            class: "form-label fw-semibold" %>
+
+        <%= text_field_tag :last_name,
+            session[:quiz]["last_name"],
+            class: "form-control",
+            required: true %>
+
+      </div>
+
+
+      <div class="mb-4">
+
+        <%= label_tag :email,
+            "Your email",
+            class: "form-label fw-semibold" %>
+
+        <%= email_field_tag :email,
+            session[:quiz]["email"],
+            class: "form-control",
+            required: true %>
+
+      </div>
+
+
+      <div class="form-check mb-4">
+
+        <%= check_box_tag :contact_permission,
+            "yes",
+            session[:quiz]["contact_permission"] == "yes",
+            class: "form-check-input",
+            required: true %>
+
+        <%= label_tag :contact_permission,
+            "Yes, I agree I am happy for the Redhead Orthodontics Team to contact me with my results.",
+            class: "form-check-label" %>
+
+      </div>
+
+
+      <div class="text-end">
+
+        <button class="btn btn-primary quiz-next">
+          Start Quiz →
+        </button>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,158 @@
+<div class="quiz-page">
+
+  <div class="quiz-card">
+
+    <div class="quiz-step">
+      Step 8 of 9
+    </div>
+
+    <div class="quiz-progress">
+      <div
+        class="quiz-progress-bar"
+        style="width: 89%;">
+      </div>
+    </div>
+
+
+    <h1 class="quiz-title">
+      A few questions on your habits
+    </h1>
+
+
+    <p class="quiz-description">
+      A brace has to fit with your everyday life.
+      These questions are designed to help us see if
+      a removable brace is sensible in your specific case.
+    </p>
+
+
+    <%= form_with url: "/quiz/6",
+                  method: :post,
+                  local: true do %>
+
+
+      <!-- ==========================
+           QUESTION 1
+           ========================== -->
+
+      <h5 class="mb-3">
+        If you are given a removable brace option,
+        would you wear it 22 hours a day?
+      </h5>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :wear_22_hours,
+            "yes",
+            session[:quiz]["wear_22_hours"] == "yes",
+            required: true,
+            id: "wear_yes" %>
+
+        <%= label_tag "wear_yes", "Yes" %>
+
+      </div>
+
+
+      <div class="quiz-answer mb-5">
+
+        <%= radio_button_tag :wear_22_hours,
+            "no",
+            session[:quiz]["wear_22_hours"] == "no",
+            id: "wear_no" %>
+
+        <%= label_tag "wear_no", "No" %>
+
+      </div>
+
+
+      <!-- ==========================
+           QUESTION 2
+           ========================== -->
+
+      <h5 class="mb-3">
+        Do you drink more than 5 cups of Tea or Coffee
+        per day?
+      </h5>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :tea_coffee,
+            "yes",
+            session[:quiz]["tea_coffee"] == "yes",
+            required: true,
+            id: "tea_yes" %>
+
+        <%= label_tag "tea_yes", "Yes" %>
+
+      </div>
+
+
+      <div class="quiz-answer mb-5">
+
+        <%= radio_button_tag :tea_coffee,
+            "no",
+            session[:quiz]["tea_coffee"] == "no",
+            id: "tea_no" %>
+
+        <%= label_tag "tea_no", "No" %>
+
+      </div>
+
+
+      <!-- ==========================
+           QUESTION 3
+           ========================== -->
+
+      <h5 class="mb-3">
+        Do you have lots of little snacks throughout
+        the day or just eat at main meals?
+      </h5>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :snacking,
+            "snacks",
+            session[:quiz]["snacking"] == "snacks",
+            required: true,
+            id: "snacks" %>
+
+        <%= label_tag "snacks",
+            "Lots of snacks" %>
+
+      </div>
+
+
+      <div class="quiz-answer">
+
+        <%= radio_button_tag :snacking,
+            "main_meals",
+            session[:quiz]["snacking"] == "main_meals",
+            id: "main_meals" %>
+
+        <%= label_tag "main_meals",
+            "Just main meals" %>
+
+      </div>
+
+
+      <div class="quiz-navigation">
+
+        <a href="/quiz/5" class="quiz-previous">
+          ← Previous
+        </a>
+
+        <button class="btn btn-primary quiz-next">
+          Next →
+        </button>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>
